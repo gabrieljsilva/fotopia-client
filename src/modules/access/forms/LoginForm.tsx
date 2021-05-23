@@ -17,7 +17,7 @@ export function LogInForm() {
   return (
     <Form
       name="login"
-      style={{ width: screens.xs ? '280px' : '320px' }}
+      style={{ width: screens.xs ? '300px' : '320px' }}
       onFinish={handleLogin}
       initialValues={{ remember: false }}>
       <Form.Item

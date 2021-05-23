@@ -9,7 +9,7 @@ export function RegisterForm() {
   const screens = useBreakpoint()
 
   return (
-    <Form name="register" style={{ width: screens.xs ? '280px' : '320px' }}>
+    <Form name="register" style={{ width: screens.xs ? '300px' : '320px' }}>
       <Form.Item
         name="name"
         rules={[{ required: true, message: 'Insira seu nome' }]}>
