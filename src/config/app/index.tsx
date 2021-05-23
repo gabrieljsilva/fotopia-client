@@ -7,12 +7,10 @@ interface BaseAppProps {
   children?: ReactNode
 }
 
-export function BaseApp ({ children }: BaseAppProps) {
+export function BaseApp({ children }: BaseAppProps) {
   return (
     <div className="App">
-      <ReduxProvider store={store}>
-        {children}
-      </ReduxProvider>
+      <ReduxProvider store={store}>{children}</ReduxProvider>
     </div>
   )
 }

@@ -2,8 +2,13 @@ import styled from 'styled-components'
 
 interface FlexProps {
   position?: 'relative' | 'absolute'
-  direction?: 'row' | 'column',
-  justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'
+  direction?: 'row' | 'column'
+  justify?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
   items?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline'
   minHeight?: string
   bgColor?: string
@@ -19,17 +24,16 @@ interface FlexProps {
 export const Flex = styled.div<FlexProps>`
   position: ${({ position = 'initial' }) => position};
   z-index: ${({ zIndex = 0 }) => zIndex};
-  
+
   /* Flex */
   display: flex;
   flex-direction: ${({ direction = 'row' }) => direction};
   justify-content: ${({ justify = 'flex-start' }) => justify};
   align-items: ${({ items = 'stretch' }) => items};
 
-
   /* SIZING */
   min-height: ${({ minHeight }) => minHeight || 'initial'};
-  
+
   /* MARGIN */
   margin: ${({ margin }) => margin || 'initial'};
 
@@ -42,6 +46,4 @@ export const Flex = styled.div<FlexProps>`
 
   /* COLORING */
   background-color: ${({ bgColor = 'transparent' }) => bgColor};
-
-  
 `
