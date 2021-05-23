@@ -1,13 +1,18 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { Home, NotFound } from 'pages'
+import { routes } from './setupRoutes'
+import { NotFound } from 'pages'
 
 export function Routes () {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Home} />
+        {
+          routes.map(({ Page, Layout, path }, index) => (
+            <Route path={path} exact key={index} render={() => <Layout> <Page /> </Layout> } />
+          ))
+        }
         <Route path="*" exact component={NotFound} />
       </Switch>
     </BrowserRouter>
