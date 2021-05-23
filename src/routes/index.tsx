@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { routes } from './setupRoutes'
-import { NotFound } from 'pages'
 
 export function Routes() {
   return (
@@ -20,7 +19,6 @@ export function Routes() {
             )}
           />
         ))}
-        <Route path="*" exact component={NotFound} />
       </Switch>
     </BrowserRouter>
   )

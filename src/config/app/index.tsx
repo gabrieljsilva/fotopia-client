@@ -9,7 +9,7 @@ interface BaseAppProps {
 
 export function BaseApp({ children }: BaseAppProps) {
   return (
-    <div className="App">
+    <div>
       <ReduxProvider store={store}>{children}</ReduxProvider>
     </div>
   )
