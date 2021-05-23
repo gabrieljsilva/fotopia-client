@@ -1,13 +1,17 @@
 import React from 'react'
 
 import { LayoutProps } from 'types'
-import { Container, UIFooter, Flex } from 'shared/components'
+import { Container, UIFooter, UIHeader, Flex } from 'shared/components'
 
 export function LoggedInLayout({ children }: LayoutProps) {
   return (
     <>
+      <UIHeader />
       <Container>
-        <Flex minHeight="100vh" direction="column" justify="space-between">
+        <Flex
+          minHeight="calc(100vh - 48px)"
+          direction="column"
+          justify="space-between">
           {children}
           <UIFooter />
         </Flex>
