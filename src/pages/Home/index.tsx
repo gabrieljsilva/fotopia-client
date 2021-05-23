@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
+import { Link } from 'react-router-dom'
 
 import { Flex, Spinner } from 'shared/components'
 import { StyledTitle, StyledSubTitle } from './styles'
@@ -18,7 +19,9 @@ export function Home() {
         <StyledSubTitle>Compartilhe momentos</StyledSubTitle>
         <Flex pb="100px">
           <Button type="link">Ver fotos</Button>
-          <Button type="primary">Começar agora</Button>
+          <Link to="/access">
+            <Button type="primary">Começar agora</Button>
+          </Link>
         </Flex>
       </Flex>
       {/* ROTATING ICONS */}

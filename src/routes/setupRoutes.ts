@@ -2,7 +2,7 @@ import { AppRoute } from 'types'
 
 import { DefaultLayout } from 'layouts'
 
-import { Home, Register, NotFound } from 'pages'
+import { Home, Access, NotFound } from 'pages'
 
 export const routes: AppRoute[] = [
   {
@@ -11,8 +11,8 @@ export const routes: AppRoute[] = [
     Layout: DefaultLayout
   },
   {
-    path: '/register',
-    Page: Register,
+    path: '/access',
+    Page: Access,
     Layout: DefaultLayout
   },
   {
