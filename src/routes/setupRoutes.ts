@@ -1,8 +1,8 @@
 import { AppRoute } from 'types'
 
-import { DefaultLayout } from 'layouts'
+import { DefaultLayout, LoggedInLayout } from 'layouts'
 
-import { Home, Access, NotFound } from 'pages'
+import { Home, Access, NotFound, Timeline } from 'pages'
 
 export const routes: AppRoute[] = [
   {
@@ -14,6 +14,11 @@ export const routes: AppRoute[] = [
     path: '/access',
     Page: Access,
     Layout: DefaultLayout
+  },
+  {
+    path: '/timeline',
+    Page: Timeline,
+    Layout: LoggedInLayout
   },
   {
     path: '*',

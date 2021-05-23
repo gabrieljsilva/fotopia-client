@@ -2,6 +2,8 @@ import React from 'react'
 import { Form, Input, Button, Grid } from 'antd'
 import { MailOutlined, LockOutlined } from '@ant-design/icons'
 import { blue } from '@ant-design/colors'
+import { Link } from 'react-router-dom'
+
 import Checkbox from 'antd/lib/checkbox/Checkbox'
 import { Flex } from 'shared/components'
 
@@ -52,9 +54,11 @@ export function LogInForm() {
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" block>
-          Entrar
-        </Button>
+        <Link to="/timeline">
+          <Button type="primary" htmlType="submit" block>
+            Entrar
+          </Button>
+        </Link>
       </Form.Item>
     </Form>
   )
