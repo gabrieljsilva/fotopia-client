@@ -17,9 +17,17 @@ export function UIFooter() {
       <Flex justify="center">
         <FooterTitle type="secondary">
           Fotopia
-          <GithubFilled />
-          <InstagramFilled />
-          <LinkedinFilled />
+          <a
+            href="https://github.com/gabrieljsilva"
+            style={{ textDecoration: 'none' }}>
+            <GithubFilled />
+          </a>
+          <a href="https://www.linkedin.com/in/gabrieldjs21/">
+            <LinkedinFilled />
+          </a>
+          <a href="https://www.instagram.com/gabrieljsillva/">
+            <InstagramFilled />
+          </a>
         </FooterTitle>
       </Flex>
       <Flex justify="center">
