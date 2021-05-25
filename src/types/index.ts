@@ -1,3 +1,5 @@
 export * from './Layout'
 export * from './AppRoute'
 export * from './User'
+export * from './Image'
+export * from './Album'

@@ -10,7 +10,16 @@ interface FlexProps {
     | 'space-between'
     | 'space-around'
   items?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline'
+  wrap?: 'nowrap' | 'wrap' | 'wrap-reverse' | 'initial'
+
+  /* HEIGHT */
   minHeight?: string
+  height?: string
+
+  /* WIDTH */
+  width?: string
+  maxWidth?: string
+
   bgColor?: string
   padding?: string
   pt?: string
@@ -19,6 +28,7 @@ interface FlexProps {
   pr?: string
   margin?: string
   zIndex?: number
+  flex?: string
 }
 
 export const Flex = styled.div<FlexProps>`
@@ -26,13 +36,20 @@ export const Flex = styled.div<FlexProps>`
   z-index: ${({ zIndex = 0 }) => zIndex};
 
   /* Flex */
+  flex: ${({ flex = 'initial' }) => flex};
   display: flex;
   flex-direction: ${({ direction = 'row' }) => direction};
   justify-content: ${({ justify = 'flex-start' }) => justify};
   align-items: ${({ items = 'stretch' }) => items};
+  flex-wrap: ${({ wrap = 'stretch' }) => wrap};
 
   /* SIZING */
   min-height: ${({ minHeight }) => minHeight || 'initial'};
+  height: ${({ height }) => height || 'initial'};
+
+  /* WIDTH */
+  width: ${({ width = 'initial' }) => width};
+  max-width: ${({ maxWidth = 'initial' }) => maxWidth};
 
   /* MARGIN */
   margin: ${({ margin }) => margin || 'initial'};

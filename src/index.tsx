@@ -5,10 +5,8 @@ import { BaseApp } from 'config/app'
 import { Routes } from 'routes'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BaseApp>
-      <Routes />
-    </BaseApp>
-  </React.StrictMode>,
+  <BaseApp>
+    <Routes />
+  </BaseApp>,
   document.getElementById('root')
 )
