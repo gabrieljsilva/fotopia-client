@@ -1,7 +1,7 @@
 import { Image } from 'types'
 
 export interface Album {
-  id?: string
+  id: number
   name: string
   images: Image[]
 }
