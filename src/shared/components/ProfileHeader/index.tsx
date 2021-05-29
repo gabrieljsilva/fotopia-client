@@ -29,12 +29,17 @@ export function UIProfileHeader({
         size={96}
         src={avatarImageUrl}
       />
-      <Text size="16px" color={grey[8]} style={{ marginLeft: '50px' }}>
+      <Text
+        size="16px"
+        fontWeight={400}
+        color={grey[7]}
+        style={{ marginLeft: '50px' }}>
         {userName}
       </Text>
       <Text
         size="12px"
         type="secondary"
+        fontWeight={300}
         color={grey[2]}
         style={{ marginLeft: '50px' }}>
         {userEmail}
