@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+
 import { User, Album } from 'types'
 import { Author, generateAlbum } from 'utils'
 

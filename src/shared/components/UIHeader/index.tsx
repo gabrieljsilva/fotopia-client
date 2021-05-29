@@ -2,10 +2,9 @@ import React from 'react'
 import { Avatar, Input } from 'antd'
 import { UserOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
+
 import { useSelector } from 'store'
-
 import { Container, Flex } from 'shared/components'
-
 import { UserNameText } from './styled'
 
 const { Search } = Input

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import { useSelector } from 'store'
 
+import { useSelector } from 'store'
 import { UIProfileHeader, UIAlbum } from 'shared/components'
 import { Author } from 'utils'
 
