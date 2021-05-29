@@ -1,9 +1,13 @@
 import React from 'react'
 import { Row, Col } from 'antd'
+import { useSelector } from 'store'
 
-import { UIProfileHeader } from 'shared/components'
+import { UIProfileHeader, UIAlbum } from 'shared/components'
+import { Author } from 'utils'
 
 export function Profile() {
+  const { albums } = useSelector((state) => state.user)
+
   return (
     <Row gutter={[0, 20]}>
       <Col span={24}>
@@ -14,6 +18,11 @@ export function Profile() {
           userEmail="gabrieldjs21@gmail.com"
         />
       </Col>
+      {albums.map((album, index) => (
+        <Col span={24} key={index}>
+          <UIAlbum album={album} author={Author} />
+        </Col>
+      ))}
     </Row>
   )
 }

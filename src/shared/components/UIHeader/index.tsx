@@ -27,8 +27,17 @@ export function UIHeader() {
           <Flex items="center">
             <Search placeholder="Pesquisar" style={{ width: 300 }} />
           </Flex>
-          <Flex items="center" justify="center">
-            <Avatar shape="circle" size="large" icon={<UserOutlined />} />
+          <Flex
+            onClick={() => history.push('/me')}
+            items="center"
+            justify="center"
+            style={{ cursor: 'pointer' }}>
+            <Avatar
+              src={user.avatar}
+              shape="circle"
+              size="large"
+              icon={<UserOutlined />}
+            />
             <UserNameText> {user.name}</UserNameText>
           </Flex>
         </Flex>
