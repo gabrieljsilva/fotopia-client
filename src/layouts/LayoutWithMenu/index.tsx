@@ -3,7 +3,7 @@ import React from 'react'
 import { LayoutProps } from 'types'
 import { Container, UIFooter, UIHeader, Flex } from 'shared/components'
 
-export function LoggedInLayout({ children }: LayoutProps) {
+export function LayoutWithMenu({ children }: LayoutProps) {
   return (
     <>
       <UIHeader />

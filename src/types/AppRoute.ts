@@ -5,4 +5,5 @@ export interface AppRoute {
   path: string
   Page: ComponentType<any>
   Layout: ComponentType<LayoutProps>
+  protected: boolean
 }

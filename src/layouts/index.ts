@@ -1,2 +1,2 @@
 export * from './Default'
-export * from './loggedIn'
+export * from './LayoutWithMenu'
