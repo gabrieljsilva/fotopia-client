@@ -5,6 +5,8 @@ export const Author: User = {
   id: 1,
   name: 'Gabriel Silva',
   email: 'gabrieldjs21@gmail.com',
+  cover:
+    'https://images.pexels.com/photos/1193743/pexels-photo-1193743.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
   avatar:
     'https://images.pexels.com/photos/953457/pexels-photo-953457.jpeg?cs=srgb&dl=pexels-william-mattey-953457.jpg&fm=jpg'
 }

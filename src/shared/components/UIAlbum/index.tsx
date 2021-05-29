@@ -10,8 +10,7 @@ import {
 } from '@ant-design/icons'
 
 import { Album, User } from 'types'
-import { Flex, Text, UIAlbumMenu } from 'shared/components'
-import { MasonryContainer, MasonryItem } from './styles'
+import { Flex, Text, UIAlbumMenu, MasonaryImageGrid } from 'shared/components'
 
 interface UIAlbumProps {
   album: Album
@@ -95,20 +94,7 @@ export function UIAlbum({ album, author }: UIAlbumProps) {
           </Flex>
         </Dropdown>
       </Flex>
-      <MasonryContainer
-        style={{ pointerEvents: menuIsVisible ? 'none' : 'initial' }}>
-        {album.images.map(({ url }, index) => (
-          <MasonryItem key={index}>
-            <Image src={url} style={{ borderRadius: '4px' }} />
-          </MasonryItem>
-        ))}
-      </MasonryContainer>
-
-      {/*  */}
+      <MasonaryImageGrid images={album.images} />
     </Card>
   )
 }
-
-/**
- * Para testar: adicionar altura do container fixo e as imagens tamanho relativo
- */

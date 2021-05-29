@@ -2,7 +2,15 @@ import { AppRoute } from 'types'
 
 import { DefaultLayout, LayoutWithMenu } from 'layouts'
 
-import { Home, Access, NotFound, Timeline, Profile } from 'pages'
+import {
+  Home,
+  Access,
+  NotFound,
+  Timeline,
+  Profile,
+  EditPersonalData,
+  CreateAlbum
+} from 'pages'
 
 export const routes: AppRoute[] = [
   {
@@ -32,6 +40,18 @@ export const routes: AppRoute[] = [
   {
     path: '/me',
     Page: Profile,
+    Layout: LayoutWithMenu,
+    isProtected: true
+  },
+  {
+    path: '/me/edit',
+    Page: EditPersonalData,
+    Layout: LayoutWithMenu,
+    isProtected: true
+  },
+  {
+    path: '/me/create-album',
+    Page: CreateAlbum,
     Layout: LayoutWithMenu,
     isProtected: true
   },

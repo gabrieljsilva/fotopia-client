@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Row, Col } from 'antd'
 import { PlusOutlined } from '@ant-design/icons'
 import { useSelector } from 'store'
+import { Link } from 'react-router-dom'
 
 import { Flex, UIAlbum } from 'shared/components'
 import { Author } from 'utils'
@@ -11,9 +12,11 @@ export function Timeline() {
   return (
     <>
       <Flex justify="flex-end" margin="16px 0px 16px 0px">
-        <Button type="primary" icon={<PlusOutlined />}>
-          Postar álbum
-        </Button>
+        <Link to="/me/create-album">
+          <Button type="primary" icon={<PlusOutlined />}>
+            Postar álbum
+          </Button>
+        </Link>
       </Flex>
       <Flex
         minHeight="100%"
