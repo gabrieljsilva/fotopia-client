@@ -1,14 +1,18 @@
 import React from 'react'
-import { Avatar } from 'antd'
+import { Avatar, Input } from 'antd'
 import { UserOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
+import { useSelector } from 'store'
 
 import { Container, Flex } from 'shared/components'
 
 import { UserNameText } from './styled'
 
+const { Search } = Input
+
 export function UIHeader() {
   const history = useHistory()
+  const user = useSelector((state) => state.user)
 
   return (
     <Flex style={{ backgroundColor: 'white' }} items="center">
@@ -20,9 +24,12 @@ export function UIHeader() {
             style={{ height: 'auto', cursor: 'pointer' }}
             onClick={() => history.push('/')}
           />
+          <Flex items="center">
+            <Search placeholder="Pesquisar" style={{ width: 300 }} />
+          </Flex>
           <Flex items="center" justify="center">
             <Avatar shape="circle" size="large" icon={<UserOutlined />} />
-            <UserNameText>Gabriel Silva</UserNameText>
+            <UserNameText> {user.name}</UserNameText>
           </Flex>
         </Flex>
       </Container>

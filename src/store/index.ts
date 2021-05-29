@@ -4,10 +4,11 @@ import {
   useSelector as typedUserSelector
 } from 'react-redux'
 
-import { userSlice } from './modules'
+import { userSlice, AlbumsSlice } from './modules'
 
 const reducers = combineReducers({
-  user: userSlice.reducer
+  user: userSlice.reducer,
+  albums: AlbumsSlice.reducer
 })
 
 export const store = createStore(reducers)
