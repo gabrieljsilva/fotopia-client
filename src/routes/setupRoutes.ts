@@ -9,36 +9,36 @@ export const routes: AppRoute[] = [
     path: '/',
     Page: Home,
     Layout: DefaultLayout,
-    protected: false
+    isProtected: false
   },
   {
     path: '/access',
     Page: Access,
     Layout: DefaultLayout,
-    protected: false
+    isProtected: false
   },
   {
     path: '/timeline',
     Page: Timeline,
     Layout: LayoutWithMenu,
-    protected: false
+    isProtected: false
   },
   {
     path: '/user/:id',
     Page: Profile,
     Layout: DefaultLayout,
-    protected: false
+    isProtected: false
   },
   {
     path: '/me',
     Page: Profile,
     Layout: LayoutWithMenu,
-    protected: true
+    isProtected: true
   },
   {
     path: '*',
     Page: NotFound,
     Layout: DefaultLayout,
-    protected: false
+    isProtected: false
   }
 ]

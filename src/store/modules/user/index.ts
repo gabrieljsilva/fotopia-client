@@ -9,7 +9,7 @@ interface UserState extends User {
 
 const initialState: UserState = {
   ...Author,
-  isLoggedIn: false
+  isLoggedIn: true
 }
 
 export const userSlice = createSlice({
