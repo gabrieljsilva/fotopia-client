@@ -15,8 +15,8 @@ export function Home() {
         items="center"
         minHeight="100vh">
         <img src="/images/fotopia_logo_vertical.png" alt="logo fotopia" />
-        <StyledTitle>Guarde lembranças</StyledTitle>
-        <StyledSubTitle>Compartilhe momentos</StyledSubTitle>
+        <StyledTitle>Capture momentos</StyledTitle>
+        <StyledSubTitle>Guarde lembranças</StyledSubTitle>
         <Flex pb="100px">
           <Button type="link">Ver fotos</Button>
           <Link to="/access">
