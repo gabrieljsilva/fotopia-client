@@ -1,38 +1,47 @@
 import React from 'react'
-import { Layout } from 'antd'
 import {
   GithubFilled,
   InstagramFilled,
   LinkedinFilled
 } from '@ant-design/icons'
 
-import { Flex } from 'shared/components'
-import { FooterTitle, FooterCopyRight } from './styles'
+import { grey } from '@ant-design/colors'
 
-const { Footer } = Layout
+import { Flex, Text } from 'shared/components'
+import { Link } from 'react-router-dom'
 
 export function UIFooter() {
   return (
-    <Footer>
-      <Flex justify="center">
-        <FooterTitle type="secondary">
+    <Flex
+      direction="column"
+      justify="space-between"
+      items="center"
+      width="100%"
+      margin="32px 0 32px 0"
+      height="60px">
+      <Flex width="200px" justify="space-between">
+        <Text fontWeight={400} color={grey[4]}>
           Fotopia
-          <a
-            href="https://github.com/gabrieljsilva"
-            style={{ textDecoration: 'none' }}>
-            <GithubFilled />
-          </a>
-          <a href="https://www.linkedin.com/in/gabrieldjs21/">
-            <LinkedinFilled />
-          </a>
-          <a href="https://www.instagram.com/gabrieljsillva/">
-            <InstagramFilled />
-          </a>
-        </FooterTitle>
+        </Text>
+        <Link to="/https://github.com/gabrieljsilva" style={{ color: grey[4] }}>
+          <GithubFilled />
+        </Link>
+        <Link
+          to="/https://www.linkedin.com/in/gabrieldjs21/"
+          style={{ color: grey[4] }}>
+          <LinkedinFilled />
+        </Link>
+        <Link
+          to="/https://www.instagram.com/gabrieljsillva/"
+          style={{ color: grey[4] }}>
+          <InstagramFilled />
+        </Link>
       </Flex>
       <Flex justify="center">
-        <FooterCopyRight type="secondary">Copyright ©2020</FooterCopyRight>
+        <Text fontWeight={200} color={grey[4]}>
+          Copyright ©2020
+        </Text>
       </Flex>
-    </Footer>
+    </Flex>
   )
 }

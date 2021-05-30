@@ -43,8 +43,8 @@ export function UIAlbum({ album, author }: UIAlbumProps) {
         <Flex>
           <Avatar src={author.avatar} size={64} />
           <Flex justify="center" direction="column" flex="1" pl="10px">
-            <Text>{author.name}</Text>
-            <Text color={grey[5]} size="12px">
+            <Text fontWeight={400}>{author.name}</Text>
+            <Text fontWeight={300} color={grey[5]} size="12px">
               {author.email}
             </Text>
           </Flex>
