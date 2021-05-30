@@ -13,7 +13,9 @@ export function Home() {
         <StyledTitle>Capture momentos</StyledTitle>
         <StyledSubTitle>Guarde lembranças</StyledSubTitle>
         <Flex>
-          <Button type="link">Ver fotos</Button>
+          <Link to="/timeline">
+            <Button type="link">Ver fotos</Button>
+          </Link>
           <Link to="/access">
             <Button type="primary">Começar agora</Button>
           </Link>
