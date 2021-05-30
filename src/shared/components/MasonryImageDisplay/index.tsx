@@ -11,8 +11,8 @@ interface MasonryImageGrid {
 export function MasonaryImageGrid({ images }: MasonryImageGrid) {
   return (
     <MasonryContainer>
-      {images.map(({ url, id }) => (
-        <MasonryItem key={id}>
+      {images.map(({ url }, index) => (
+        <MasonryItem key={index}>
           <Image src={url} style={{ borderRadius: '4px' }} />
         </MasonryItem>
       ))}

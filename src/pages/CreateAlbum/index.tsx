@@ -5,15 +5,15 @@ import {
   Flex,
   UILoggedInProfileHeader,
   UploadArea,
-  MasonaryImageGrid
+  MasonaryImageGrid,
+  UploadButton
 } from 'shared/components'
 
 export function CreateAlbum() {
   const [filelist, setFilelist] = useState<File[]>([])
-  const [refresh, setRefresh] = useState(false)
 
   function handleFileChange(files: File[]) {
-    setFilelist(files)
+    setFilelist([...filelist, ...files])
   }
 
   return (
@@ -22,7 +22,7 @@ export function CreateAlbum() {
         <UILoggedInProfileHeader />
       </Col>
       <Col span={24} hidden={filelist.length > 0}>
-        <UploadArea browseFilesOn={refresh} onChange={handleFileChange} />
+        <UploadArea onChange={handleFileChange} />
       </Col>
       <Col span={8} hidden={filelist.length === 0}>
         <Input placeholder="Título do álbum" />
@@ -30,9 +30,7 @@ export function CreateAlbum() {
       <Col span={16} hidden={filelist.length === 0}>
         <Flex justify="flex-end" items="center">
           {/* ADICIONAR FUNÇÃO PARA CHAMAR O SELETOR DE ARQUIVOS */}
-          <Button onClick={() => setRefresh(!refresh)}>
-            Adicionar mais images
-          </Button>
+          <UploadButton onChange={handleFileChange} label="adicionar fotos" />
           <Button style={{ marginLeft: '10px' }} type="primary">
             Salvar Álbum
           </Button>

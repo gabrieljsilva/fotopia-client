@@ -8,16 +8,11 @@ import { StyledTitle, StyledSubTitle } from './styles'
 export function Home() {
   return (
     <Flex justify="center" items="center" minHeight="100vh">
-      <Flex
-        zIndex={1}
-        direction="column"
-        justify="center"
-        items="center"
-        minHeight="100vh">
+      <Flex direction="column" justify="center" items="center">
         <img src="/images/fotopia_logo_vertical.png" alt="logo fotopia" />
         <StyledTitle>Capture momentos</StyledTitle>
         <StyledSubTitle>Guarde lembranças</StyledSubTitle>
-        <Flex pb="100px">
+        <Flex>
           <Button type="link">Ver fotos</Button>
           <Link to="/access">
             <Button type="primary">Começar agora</Button>
@@ -25,7 +20,7 @@ export function Home() {
         </Flex>
       </Flex>
       {/* ROTATING ICONS */}
-      <Flex
+      {/* <Flex
         zIndex={0}
         position="absolute"
         style={{ left: '140px', top: '220px' }}>
@@ -97,7 +92,7 @@ export function Home() {
         <Spinner direction="left">
           <img src="/images/rhombus_collection.svg" alt="piont" />
         </Spinner>
-      </Flex>
+      </Flex> */}
     </Flex>
   )
 }

@@ -1,41 +1,29 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react'
+import React, { useRef, useCallback } from 'react'
 import { UploadOutlined } from '@ant-design/icons'
 import { blue } from '@ant-design/colors'
 import { Card } from 'antd'
 
 import { Flex, Text } from 'shared/components'
+import { validateFile } from 'utils'
 
 interface UploadAreaProps {
   acceptOnly?: string[]
   onChange?: (Files: File[]) => void
-  browseFilesOn?: boolean
 }
 
 export function UploadArea({
   acceptOnly = ['image/jpg', 'image/gif', 'image/png', 'image/jpeg'],
-  onChange,
-  browseFilesOn
+  onChange
 }: UploadAreaProps) {
-  const [selectedFiles, setFiles] = useState<File[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
-
-  function validateFile(file: File) {
-    return acceptOnly?.includes(file.type)
-  }
 
   function onFilesAdded(fileList: FileList | File[]) {
     const files = Array.from(fileList)
-    const validatedFiles = files.filter((file) => validateFile(file))
-    setFiles([...selectedFiles, ...validatedFiles])
+    const validatedFiles = files.filter((file) =>
+      validateFile(file, acceptOnly)
+    )
+    onChange?.(validatedFiles)
   }
-
-  useEffect(() => {
-    onChange?.(selectedFiles)
-  }, [selectedFiles])
-
-  useEffect(() => {
-    inputRef.current?.click()
-  }, [browseFilesOn])
 
   const onUploadAreaClick = useCallback(() => {
     inputRef.current?.click()
